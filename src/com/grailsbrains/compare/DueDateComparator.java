@@ -1,15 +1,18 @@
-package com.purchase.web;
+package com.grailsbrains.compare;
 
-import java.util.Comparator;
+import com.grailsbrains.manage.Output;
+import com.grailsbrains.persistence.PurchaseOrder;
+
+import java.util.*;
 
 /**
  * Created by Abhishek on 10-05-2017.
  */
-public class DueDateComparator implements Comparator<Po> {
+public class DueDateComparator implements Comparator<Output> {
     @Override
-    public int compare(Po o1, Po o2) {
+    public int compare(Output o1, Output o2) {
 
-        return o1.getDuedate().compareToIgnoreCase(o2.getDuedate());
+        return o1.getDueDate().compareTo(o2.getDueDate());
 
     }
 }
